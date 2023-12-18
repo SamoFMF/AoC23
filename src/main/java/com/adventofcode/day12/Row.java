@@ -26,17 +26,6 @@ public record Row(
         return new Row(springs, groups);
     }
 
-    public long getCombinationsLimited() {
-        setLastSpring(OPERATIONAL);
-        var combinations = new HashMap<Point2D, Long>();
-        getCombinationsRecursive(0, 0, 1, combinations);
-
-        return combinations.entrySet().stream()
-            .filter(entry -> entry.getKey().y() == groups.length)
-            .mapToLong(Map.Entry::getValue)
-            .sum();
-    }
-
     public long getCombinations(int repeats) {
         var combinations = new HashMap<Point2D, Long>();
         combinations.put(new Point2D(0, 0), 1L);

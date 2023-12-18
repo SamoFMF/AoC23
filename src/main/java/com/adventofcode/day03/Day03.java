@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 public class Day03 {
 
-    private static Set<String> numbers = new HashSet<>();
+    private static final Set<String> numbers = new HashSet<>();
 
     static {
         IntStream.range(0, 10)

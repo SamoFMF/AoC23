@@ -2,7 +2,6 @@ package com.adventofcode.day03;
 
 import com.adventofcode.utils.Point2D;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.stream.IntStream;
 
 public class Grid {
 
-    private static Set<Character> ignore = new HashSet<>();
+    private static final Set<Character> ignore = new HashSet<>();
 
     static {
         IntStream.range(0, 10)
