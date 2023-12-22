@@ -43,6 +43,8 @@ public class ConversionMap {
             if (iEnd == -1) {
                 return intervals;
             }
+        } else if (iStart < ranges.size() && iStart == iEnd && start > ranges.get(iStart).endSource()) {
+            return List.of(interval);
         } else {
             start = null;
         }
