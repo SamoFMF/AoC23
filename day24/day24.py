@@ -4,7 +4,7 @@ from z3 import *
 
 P = []
 V = []
-with open("input.txt") as f:
+with open("input24.txt") as f:
     for line in f:
         parts = line.split(" @ ")
         P += [[int(p) for p in parts[0].split(", ")]]
